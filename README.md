@@ -3,6 +3,11 @@
 ### Dependancies
 You must install numpy, pandas, setuptools for this project to work
 ### SetupTools
-Run 'python3 setup.py develop' in this project's root directory to install the python package in dev mode
+On linux, you can run 'python3 setup.py develop' in this project's root directory to install the python package in dev
+mode. This is optional.
 ## Use
-Run 'python3 -m ias-fakedetection --help' anywhere for details
+### With SetupTools
+Run 'python3 -m ias-fakedetection --help' anywhere
+### Without SetupTools
+Open this project's root directory and run 'python3 __main__.py --help'
+
