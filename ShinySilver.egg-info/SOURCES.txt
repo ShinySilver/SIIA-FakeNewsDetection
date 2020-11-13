@@ -1,0 +1,7 @@
+README.md
+setup.py
+ShinySilver.egg-info/PKG-INFO
+ShinySilver.egg-info/SOURCES.txt
+ShinySilver.egg-info/dependency_links.txt
+ShinySilver.egg-info/top_level.txt
+ias-fakedetection/__main__.py
