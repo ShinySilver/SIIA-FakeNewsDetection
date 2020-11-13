@@ -1,3 +1,7 @@
-from resources.datasets import DB
+import resources.datasets as data
 
-print(DB)
+db_raw = data.load_raw()
+print(db_raw)
+
+db = data.load_BoW()
+print(db)
