@@ -1,4 +1,7 @@
 import os
+import pandas as pd
 
-RESOURCES_PATH = os.path.dirname(__file__)
-DATASETS_PATH = os.path.join(RESOURCES_PATH, 'datasets')
+DATASET_PATH = os.path.join(os.path.dirname(__file__), 'news_fake_or_real.csv')
+
+DB = pd.read_csv(DATASET_PATH)
+DB['label_id']=[int(label=='REAL') for label in DB['label']]

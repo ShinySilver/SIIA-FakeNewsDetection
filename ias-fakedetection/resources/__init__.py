@@ -1,5 +1,4 @@
 import os
 
-PATH = os.path.dirname(__file__)
-DATASETS = os.path.join(PATH, 'datasets')
-SAMPLE_DATASET = os.path.join(DATASETS, 'sample_dataset.npz')
+RESOURCES_PATH = os.path.dirname(__file__)
+DATASETS_PATH = os.path.join(RESOURCES_PATH, 'datasets')
