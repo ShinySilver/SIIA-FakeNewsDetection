@@ -2,7 +2,7 @@ import abstract_classifier
 from keras import models,layers
 
 
-class NeuralNetworkClassifier(abstractClassifier):
+class NeuralNetworkClassifier(AbstractClassifier):
     
     def __init__(self,lengthData):
         self.__model=models.Sequential()
