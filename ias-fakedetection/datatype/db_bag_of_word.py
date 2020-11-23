@@ -17,8 +17,8 @@ class BagOfWordDB(AbstractDB):
         self.__input_labels = np.array(list(sorted(vectorizer.vocabulary_.keys(),
                                                  key=lambda k: vectorizer.vocabulary_[k])))
 
-        self.__output = self
-
+        self.__output = db['class_id']
+        self.__output_labels = db['labels']
 
     def input_shape(self):
         return (len(self.__input),)
