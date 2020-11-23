@@ -1,17 +1,18 @@
-from import ABC,abstractmethod
+from abc import ABC,abstractmethod
 
 
 
 class AbstractClassifier(ABC):
     
     def __init__(self):
-
-    @abstractmethod
-    def train():
         pass
 
     @abstractmethod
-    def predict():
+    def train(self,*kargs,**kwargs):
+        pass
+
+    @abstractmethod
+    def predict(self,*kargs,**kwargs):
         pass
 
 
