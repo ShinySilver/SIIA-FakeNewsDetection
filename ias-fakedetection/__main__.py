@@ -2,10 +2,10 @@ import resources.datasets as data
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
+import datatype.abstract_db
 
 from keras import models
 from keras import layers
-
 
 def short_print(db, head):
     print(f"###############\n#    {head}\n###############\n")

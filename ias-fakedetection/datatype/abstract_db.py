@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class AbstractDb(ABC):
+class AbstractDB(ABC):
 
     @abstractmethod
     def input_shape(self):
