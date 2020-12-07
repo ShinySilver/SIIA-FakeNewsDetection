@@ -13,7 +13,7 @@ class BagOfWordDB(AbstractDB):
         vectorizer = CountVectorizer()
         vectorizer.fit(db['text'])
 
-        self.__input = vectorizer.transform(db['text']).toarray()
+        self.__input = [vectorizer.transform(text).toarray() for text in db['text']]
         self.__input_labels = np.array(list(sorted(vectorizer.vocabulary_.keys(),
                                                  key=lambda k: vectorizer.vocabulary_[k])))
 

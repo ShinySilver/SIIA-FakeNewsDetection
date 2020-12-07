@@ -12,6 +12,7 @@ class RawDB(AbstractDB):
         db = load_raw()
         vectorizer = CountVectorizer()
         vectorizer.fit(db['text'])
+        db['']
 
         self.__input = np.array(db['text'])
         self.__input_labels = None
