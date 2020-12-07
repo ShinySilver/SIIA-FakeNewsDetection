@@ -1,4 +1,4 @@
-import abstract_classifier
+from  classifiers.abstract_classifier import AbstractClassifier
 from keras import models,layers
 
 
@@ -13,6 +13,9 @@ class NeuralNetworkClassifier(AbstractClassifier):
         self.__model.compile(optimizer='rmsprop',
                              loss='binary_crossentropy',
                              metrics=['accuracy'])
-
-        self.train = self.__model.fit
-        self.predict = self.__model.predict
+        
+        
+    def train(self,*kargs,**kwargs):
+        return self.__model.fit(*kargs,**kwargs)
+    def predict(self,*kargs,**kwargs):
+        return self.__model.predict(*kargs,**kwargs)

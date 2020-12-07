@@ -21,7 +21,7 @@ class BagOfWordDB(AbstractDB):
         self.__output_labels = db['labels']
 
     def input_shape(self):
-        return (len(self.__input),)
+        return self.__input.shape
 
     def input(self):
         return self.__input

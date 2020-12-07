@@ -1,20 +1,28 @@
-import abstract_classifier
+from  classifiers.abstract_classifier import AbstractClassifier
 from keras import models,layers
 
 
-class DeppNeuralClassifier(AbstractClassifier):
+class DeepNeuralClassifier(AbstractClassifier):
     
-    def __init__(self,lengthData):
+    def __init__(self,lengthData,networkShape=(16,16,16,16)):
+        
+        assert len(networkShape)>2
         self.__model=models.Sequential()
-        self.__model.add(layers.Dense(16, activation='relu',
+        
+        self.__model.add(layers.Dense(networkShape[0], activation='relu',
                                       input_shape=(lengthData,)))
-        self.__model.add(layers.Dense(16, activation='relu'))
-        self.__model.add(layers.Dense(16, activation='relu'))
-        self.__model.add(layers.Dense(16, activation='relu'))
+        
+        for size in networkShape[1:]:
+            self.__model.add(layers.Dense(size, activation='relu'))
+
         self.__model.add(layers.Dense(1, activation='sigmoid'))
+        
         self.__model.compile(optimizer='rmsprop',
                              loss='binary_crossentropy',
                              metrics=['accuracy'])
-
-        self.train = self.__model.fit
-        self.predict = self.__model.predict
+        
+        
+    def train(self,*kargs,**kwargs):
+        return self.__model.fit(*kargs,**kwargs)
+    def predict(self,*kargs,**kwargs):
+        return self.__model.predict(*kargs,**kwargs)
