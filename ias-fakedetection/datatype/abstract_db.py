@@ -19,7 +19,7 @@ class AbstractDB(ABC):
         pass
 
     def X_labels(self):
-        return input()
+        return self.input_labels()
 
     @abstractmethod
     def output(self):

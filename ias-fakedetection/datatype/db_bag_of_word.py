@@ -24,7 +24,7 @@ class BagOfWordDB(AbstractDB):
         return (len(self.__input),)
 
     def input(self):
-        return self.__input()
+        return self.__input
 
     def input_labels(self):
         return self.__input_labels
