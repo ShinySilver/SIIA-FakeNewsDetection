@@ -4,7 +4,7 @@ from resources.datasets import load_raw
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.pipeline import make_pipeline
 
-class Word2VecDB(AbstractDB):
+class TfIdf(AbstractDB):
 
     def __init__(self):
         AbstractDB.__init__(self)
