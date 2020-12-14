@@ -3,9 +3,8 @@ from abc import ABC, abstractmethod
 
 class AbstractDB(ABC):
 
-    @abstractmethod
     def input_shape(self):
-        pass
+        return self.input().shape
 
     @abstractmethod
     def input(self):

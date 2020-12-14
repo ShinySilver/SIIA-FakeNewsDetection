@@ -4,7 +4,7 @@ from resources.datasets import load_raw
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.pipeline import make_pipeline
 
-class TfIdf(AbstractDB):
+class TfIdfDB(AbstractDB):
 
     def __init__(self):
         AbstractDB.__init__(self)
@@ -21,11 +21,8 @@ class TfIdf(AbstractDB):
         self.__output = db['class_id']
         self.__output_labels = db['labels']
 
-    def input_shape(self):
-        return (len(self.__input),)
-
     def input(self):
-        return self.__input()
+        return self.__input
 
     def input_labels(self):
         return self.__input_labels
