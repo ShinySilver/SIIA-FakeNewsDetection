@@ -14,7 +14,7 @@ class Word2VecDB(AbstractDB):
         pipe = make_pipeline(vectorizer, TfidfTransformer())
         pipe.fit(db['text'])
 
-        self.__input = [pipe.transform(text).toarray() for text in db['text']]
+        self.__input = pipe.transform(db['text'])
         self.__input_labels = np.array(list(sorted(vectorizer.vocabulary_.keys(),
                                                  key=lambda k: vectorizer.vocabulary_[k])))
 

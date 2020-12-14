@@ -1,4 +1,6 @@
 import numpy as np
+
+import resources
 import resources.datasets as data
 import matplotlib.pyplot as plt
 from datatype.db_raw import RawDB
@@ -30,7 +32,7 @@ def plot(history,label='NN',color='r'):
     plt.ylabel('Accuracy')
     plt.tight_layout()
     plt.legend()
-   
+
 db = BagOfWordDB()
 
 modelNN = NeuralNetworkClassifier(db.input_shape()[1])
@@ -40,7 +42,7 @@ print("============================",db.input_shape(),"=========================
 
 
 x_val_array, y_val, partial_x_train_array, partial_y_train_array = \
-            train_test_split(db.X,db.y,train_size=0.7)
+            train_test_split(db.X(),db.y(),train_size=0.7)
 
 
 historyDNN = modelDNN.train(partial_x_train_array,

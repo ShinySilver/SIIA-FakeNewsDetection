@@ -15,7 +15,7 @@ def load_raw():
         db = pd.read_csv(DATASET_PATH).to_dict(orient='list')
 
         re_punc = re.compile('[%s]' % re.escape(string.punctuation))
-        db['text'] =  [' '.join([re_punc.sub('', w) for w in text]) for text in db['text']]
+        db['text'] =  [' '.join([re_punc.sub('', w) for w in text.split(' ')]) for text in db['text']]
         db['class_id']=np.array([int(label=='REAL') for label in db['label']])
         db['labels']=np.array(['FAKE','REAL'])
         _DB_RAW = db
