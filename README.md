@@ -1,7 +1,12 @@
 # SIIA-FakeNewsDetection
+## Introduction
+
+This github contains several abstractions for databases and ML models.
+
 ## Installation
+
 ### Dependancies
-You must install numpy, pandas and matplotlib for this project to work
+You must install numpy, pandas, matplotlib and sklearn for this project to work
 ### SetupTools
 On linux, you can run 'python3 setup.py develop' in this project's root directory to install the python package in dev
 mode. This is optional.
