@@ -41,7 +41,7 @@ modelDNN = DeepNeuralClassifier(db.input_shape()[1])
 print("============================",db.input_shape(),"============================")
 
 
-x_val_array, y_val, partial_x_train_array, partial_y_train_array = \
+x_val_array, partial_x_train_array, y_val, partial_y_train_array = \
             train_test_split(db.X(),db.y(),train_size=0.7)
 
 
