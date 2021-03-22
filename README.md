@@ -14,5 +14,5 @@ mode. This is optional.
 ### With SetupTools
 Run 'python3 -m ias-fakedetection --help' anywhere
 ### Without SetupTools
-Open this project's root directory and run 'python3 __main__.py --help'
+Open this project's root directory and run 'python3 \_\_main\_\_.py --help'
 
